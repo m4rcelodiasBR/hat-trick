@@ -1,0 +1,348 @@
+/* Configuração Base e FlexBox para centralização */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #e0e0e0;
+}
+
+/* Configuração do main padrão (para não quebrar a cartela) */
+main {
+    flex: 1 0 auto;
+}
+
+/* Nova classe exclusiva para a Tela de Login */
+.tela-login main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utilitários Extras */
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+/* Customizações do Card de Login */
+.login-card {
+    border-radius: 12px;
+    padding: 20px 10px;
+}
+
+.hat-trick-title {
+    font-weight: 800;
+    color: #2e7d32;
+}
+
+.hat-trick-subtitle {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.btn-google {
+    border-radius: 25px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Links do Rodapé do Card */
+.helper-link {
+    text-transform: none !important;
+    font-weight: 500;
+}
+
+.helper-icon {
+    vertical-align: middle;
+}
+
+/* =========================================
+   NOVO LAYOUT DA CARTELA (ESTILO LOTERIA)
+   ========================================= */
+
+/* Cabeçalho das Colunas Centralizado */
+.cartela-header-novo {
+    font-weight: 900;
+    color: #757575;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Card Principal de Cada Jogo */
+.jogo-card-novo {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+/* Título "Jogo 1" Centralizado */
+.jogo-titulo {
+    text-align: center;
+    font-weight: 900;
+    color: #bdbdbd;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* Container Flexível para a Linha inteira */
+.jogo-linha-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caixas de Fundo Cinza para os Times */
+.time-caixa {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* A caixa que você pediu */
+    border-radius: 8px;
+    padding: 5px 8px;
+    flex: 1; /* Faz as duas caixas terem a mesma largura */
+}
+
+/* Alinhamentos específicos de cada lado */
+.mandante-caixa {
+    justify-content: flex-end; /* Empurra pra direita: Nome -> Escudo -> X */
+}
+
+.visitante-caixa {
+    justify-content: flex-start; /* Empurra pra esquerda: X -> Escudo -> Nome */
+}
+
+/* Caixa isolada do Empate */
+.empate-caixa {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Nomes dos Times e Escudos */
+.time-nome-novo {
+    font-weight: 900;
+    color: #424242;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+.escudo-novo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.btn-checkbox-x {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border: 2px solid #bdbdbd;
+    border-radius: 6px;
+    color: #9e9e9e; /* O X fica cinza claro quando inativo */
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+    margin: 0 8px;
+}
+
+/* Estado Ativo: Fica verde e o X fica branco */
+.btn-checkbox-x.ativo {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    color: #ffffff;
+}
+
+.btn-checkbox-x {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border: 2px solid #bdbdbd;
+    border-radius: 6px;
+    color: #9e9e9e; /* O X fica cinza claro quando inativo */
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+    margin: 0 8px;
+}
+
+/* Estado Ativo: Fica verde e o X fica branco */
+.btn-checkbox-x.ativo {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    color: #ffffff;
+}
+
+/* Barra inferior fixa para salvar */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Linha de cada Jogo */
+.jogo-linha {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite empilhar elementos no mobile */
+}
+
+/* Estruturas base das colunas do jogo */
+.time-mandante, .time-visitante {
+    display: flex;
+    align-items: center;
+}
+
+.aposta-grupo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.escudo-horizontal {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 15px;
+}
+
+.nome-time-horizontal {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+/* Botões de Aposta [ X ] */
+.btn-aposta {
+    flex: 1;
+    margin: 0 4px;
+    padding: 10px 0;
+    border: 1px solid #bdbdbd;
+    background-color: #f5f5f5;
+    color: #616161;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 0.2s;
+    text-align: center;
+    min-width: 60px;
+}
+
+.btn-aposta.ativo {
+    background-color: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+/* =========================================
+   REGRAS PARA DESKTOP (Monitores)
+   ========================================= */
+@media only screen and (min-width: 993px) {
+    .cartela-header {
+        display: block; /* Correção: block respeita as colunas nativas do Materialize */
+    }
+
+    .mobile-placar-wrapper {
+        display: contents; /* Correção: Desfaz o agrupamento mobile no desktop */
+    }
+
+    .time-mandante, .time-visitante {
+        width: 30%;
+    }
+
+    .time-mandante {
+        justify-content: flex-end; /* Empurra nome para a direita do escudo */
+    }
+
+    .time-visitante {
+        justify-content: flex-start; /* Nome à esquerda do escudo */
+    }
+
+    .aposta-grupo {
+        width: 40%;
+    }
+
+    .vs-badge {
+        display: none; /* Esconde o "X" central no desktop */
+    }
+}
+
+/* =========================================
+   REGRAS PARA MOBILE (Celulares)
+   ========================================= */
+@media only screen and (max-width: 992px) {
+    .mobile-placar-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px; /* Separa os times dos botões */
+    }
+    .time-mandante, .time-visitante {
+        width: 40%;
+        flex-direction: column; /* Escudo em cima, nome embaixo */
+    }
+    .escudo-horizontal {
+        margin: 0 0 8px 0;
+        width: 50px;
+        height: 50px;
+    }
+    .nome-time-horizontal {
+        font-size: 0.9rem;
+    }
+    .aposta-grupo {
+        width: 100%; /* Botões ocupam a largura total embaixo */
+    }
+    .vs-badge {
+        font-weight: 900;
+        color: #9e9e9e;
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes finos para telas de celular muito estreitas */
+    @media only screen and (max-width: 600px) {
+        .time-nome-novo {
+            font-size: 0.8rem;
+            margin: 0 5px;
+        }
+        .escudo-novo {
+            width: 28px;
+            height: 28px;
+        }
+        .btn-checkbox-x {
+            width: 30px;
+            height: 30px;
+            font-size: 1rem;
+            margin: 0 4px;
+        }
+        .cartela-header-novo {
+            font-size: 0.75rem; /* Diminui a fonte do cabeçalho no celular para caber tudo */
+        }
+    }
+}

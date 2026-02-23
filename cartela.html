@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cartela | Projeto Hat-Trick</title>
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="grey lighten-4">
+
+<nav class="green darken-3">
+    <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" style="font-size: 1.5rem;">Hat-Trick</a>
+        <ul id="nav-mobile" class="right">
+            <li><a href="#"><i class="material-icons left amber-text">monetization_on</i>150 RP</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container" style="padding-top: 20px; padding-bottom: 80px;">
+
+    <div class="row center-align" style="margin-bottom: 30px;">
+        <h4 style="font-weight: 900; color: #2e7d32; margin-bottom: 5px; margin-top: 0;">Rodada 16</h4>
+        <div class="chip orange white-text" style="font-weight: bold;">
+            <i class="material-icons left" style="color: white;">schedule</i> Fechamento em: 02h 15m
+        </div>
+    </div>
+
+    <div class="row cartela-header-novo">
+        <div class="col s4 center-align">TIME MANDANTE</div>
+        <div class="col s4 center-align">EMPATE</div>
+        <div class="col s4 center-align">TIME VISITANTE</div>
+    </div>
+
+    <div class="jogo-card-novo" data-jogo-id="1">
+        <div class="jogo-titulo">Jogo 1</div>
+
+        <div class="jogo-linha-flex">
+            <div class="time-caixa mandante-caixa">
+                <span class="time-nome-novo hide-on-med-and-down">Flamengo</span>
+                <span class="time-nome-novo hide-on-large-only">FLA</span>
+                <img src="https://media.api-sports.io/football/teams/127.png" class="escudo-novo">
+                <button class="btn-checkbox-x" data-escolha="MANDANTE">X</button>
+            </div>
+
+            <div class="empate-caixa">
+                <button class="btn-checkbox-x" data-escolha="EMPATE">X</button>
+            </div>
+
+            <div class="time-caixa visitante-caixa">
+                <button class="btn-checkbox-x" data-escolha="VISITANTE">X</button>
+                <img src="https://media.api-sports.io/football/teams/126.png" class="escudo-novo">
+                <span class="time-nome-novo hide-on-med-and-down">São Paulo</span>
+                <span class="time-nome-novo hide-on-large-only">SAO</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogo-card-novo" data-jogo-id="2">
+        <div class="jogo-titulo">Jogo 2</div>
+
+        <div class="jogo-linha-flex">
+            <div class="time-caixa mandante-caixa">
+                <span class="time-nome-novo hide-on-med-and-down">Palmeiras</span>
+                <span class="time-nome-novo hide-on-large-only">PAL</span>
+                <img src="https://media.api-sports.io/football/teams/121.png" class="escudo-novo">
+                <button class="btn-checkbox-x" data-escolha="MANDANTE">X</button>
+            </div>
+
+            <div class="empate-caixa">
+                <button class="btn-checkbox-x" data-escolha="EMPATE">X</button>
+            </div>
+
+            <div class="time-caixa visitante-caixa">
+                <button class="btn-checkbox-x" data-escolha="VISITANTE">X</button>
+                <img src="https://media.api-sports.io/football/teams/120.png" class="escudo-novo">
+                <span class="time-nome-novo hide-on-med-and-down">Vasco</span>
+                <span class="time-nome-novo hide-on-large-only">VAS</span>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<div class="bottom-bar z-depth-3">
+    <div class="container center-align">
+        <span id="contador-palpites" style="margin-right: 15px; font-weight: bold; color: #555;">0 / 2 preenchidos</span>
+        <button id="btn-salvar-cartela" class="btn green darken-2" disabled>
+            <i class="material-icons left">save</i> Salvar Cartela
+        </button>
+    </div>
+</div>
+
+<script src="js/jquery-4.0.0.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
