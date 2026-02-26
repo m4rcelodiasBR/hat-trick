@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
     $('.modal').modal();
+    $('.sidenav').sidenav();
+    $('.tooltipped').tooltip();
+
 
     const TOTAL_JOGOS_RODADA = 2;
 

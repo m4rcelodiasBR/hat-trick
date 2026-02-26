@@ -261,6 +261,267 @@ main {
 }
 
 /* =========================================
+   NOVA NAVEGAÇÃO E DASHBOARD
+   ========================================= */
+
+/* Menu Inferior Mobile (Bottom Navigation) */
+.mobile-bottom-nav {
+    display: none; /* Oculto por padrão (Desktop) */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 999;
+}
+
+.mobile-bottom-nav a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    color: #9e9e9e;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.mobile-bottom-nav a.ativo {
+    color: #2e7d32; /* Verde ativo */
+}
+
+.mobile-bottom-nav i {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+/* Painel de Jogos ao Vivo (Scroll Customizado) */
+.live-matches-panel {
+    padding-right: 5px;
+}
+
+/* Estilizando a barra de rolagem (Fina e elegante) */
+.live-matches-panel::-webkit-scrollbar {
+    width: 6px;
+}
+.live-matches-panel::-webkit-scrollbar-thumb {
+    background-color: #bdbdbd;
+    border-radius: 10px;
+}
+
+/* Placar de cada joguinho ao vivo */
+.placar-mini {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.placar-mini:last-child {
+    border-bottom: none;
+}
+
+.bolinha-live {
+    width: 8px;
+    height: 8px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulsar 1.5s infinite; /* Efeito piscando */
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Container de Ligas (Flexbox para 5 colunas iguais) */
+.ligas-container {
+    display: flex;
+    gap: 15px; /* Espaço entre os cards */
+    justify-content: space-between;
+    flex-wrap: wrap; /* No celular eles vão cair pra linha de baixo se não couber */
+}
+
+.liga-card {
+    flex: 1; /* Todos dividem o espaço igualmente */
+    min-width: 140px; /* No celular, evita ficar esmagado */
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 4px solid #bdbdbd; /* Cor dinâmica por liga no futuro */
+}
+
+/* Ajustes Finos para o Placar Mini com Escudos */
+.mini-escudo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin: 0 5px;
+}
+
+.status-jogo {
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 50px;
+    text-align: left;
+}
+
+.status-live { color: #d32f2f; } /* Vermelho */
+.status-fim { color: #9e9e9e; } /* Cinza */
+.status-wait { color: #f57f17; } /* Laranja */
+
+/* Lista de Top 5 dentro dos cards de Liga */
+.ranking-lista {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+.ranking-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 0.85rem;
+    color: #424242;
+}
+.ranking-lista li:last-child {
+    border-bottom: none;
+}
+.ranking-lista li span.nome {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+}
+.ranking-lista li span.xp {
+    color: #9e9e9e;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   ESTATÍSTICAS DO PERFIL (DASHBOARD)
+   ========================================= */
+
+/* Histórico de 10 Rodadas */
+.historico-rodadas-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+.historico-titulo {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #9e9e9e;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.rodadas-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px; /* Espaço uniforme entre os quadrados */
+}
+
+.rodada-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.rodada-label {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: #9e9e9e;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.rodada-score {
+    width: 100%; /* Preenche a coluna inteira */
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 900;
+    padding: 4px 0;
+    border-radius: 4px;
+    color: white;
+    cursor: help;
+}
+
+.score-acima { background-color: #1976d2; } /* Azul - Acima da Média */
+.score-abaixo { background-color: #d32f2f; } /* Vermelho - Abaixo da Média */
+
+/* Histórico de Desafios (1x1) Detalhado */
+.desafios-container {
+    margin-top: 15px;
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.desafio-placar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-top: 6px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 900;
+}
+
+.desafio-vitoria { background-color: #2e7d32; } /* Verde */
+.desafio-empate { background-color: #9e9e9e; } /* Cinza */
+.desafio-derrota { background-color: #d32f2f; } /* Vermelho */
+
+.nome-desafiante {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Coloca "..." se o nome for gigante */
+}
+
+.nome-direita {
+    text-align: right;
+}
+
+.placar-centro {
+    padding: 2px 10px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0.2); /* Fundo escurecido transparente para o número */
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+/* Regras para ativar o Bottom Nav no Mobile */
+@media only screen and (max-width: 992px) {
+    .mobile-bottom-nav {
+        display: flex;
+    }
+    body {
+        padding-bottom: 60px; /* Espaço pro menu não tampar o conteúdo */
+    }
+}
+
+/* =========================================
    REGRAS PARA DESKTOP (Monitores)
    ========================================= */
 @media only screen and (min-width: 993px) {

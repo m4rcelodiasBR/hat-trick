@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard | Projeto Hat-Trick</title>
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="grey lighten-4">
+
+<nav class="green darken-3 z-depth-2">
+    <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" style="font-weight: 900; font-size: 1.5rem;">Hat-Trick</a>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="dashboard.html" style="font-weight: bold;">Início</a></li>
+            <li><a href="cartela.html">Cartela</a></li>
+            <li><a href="#rankings">Ranking Geral</a></li>
+            <li><a href="#!"><i class="material-icons left amber-text text-lighten-1">local_play</i>150 HatCoins</a></li>
+            <li><a href="#!"><i class="material-icons right">account_circle</i>Perfil</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container" style="padding-top: 30px; padding-bottom: 40px;">
+
+    <div class="row">
+        <div class="col s12 l8">
+
+            <div class="card z-depth-1" style="border-radius: 12px;">
+                <div class="card-content">
+
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center;">
+                            <img src="https://ui-avatars.com/api/?name=Comandante+Silva&background=1b5e20&color=fff" class="circle" style="width: 50px; height: 50px; margin-right: 15px;">
+                            <div>
+                                <h6 style="font-weight: 900; margin: 0;">Comandante Silva</h6>
+                                <span class="grey-text">Ouro III • 520 XP</span>
+                            </div>
+                        </div>
+                        <div class="green-text text-darken-3" style="font-weight: bold; text-align: right;">
+                            <i class="material-icons green-text" style="vertical-align: middle;">arrow_upward</i> +16 XP
+                            <div style="font-size: 0.75rem; color: #9e9e9e;">Última Rodada</div>
+                        </div>
+                    </div>
+
+                    <div class="historico-rodadas-container">
+                        <div class="historico-titulo">Desempenho: Últimas 10 Rodadas</div>
+
+                        <div class="rodadas-grid">
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R6</span>
+                                <div class="rodada-score score-abaixo tooltipped" data-position="top" data-tooltip="Média: 12">8</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R7</span>
+                                <div class="rodada-score score-abaixo tooltipped" data-position="top" data-tooltip="Média: 11">9</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R8</span>
+                                <div class="rodada-score score-acima tooltipped" data-position="top" data-tooltip="Média: 9">12</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R9</span>
+                                <div class="rodada-score score-acima tooltipped" data-position="top" data-tooltip="Média: 10">14</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R10</span>
+                                <div class="rodada-score score-abaixo tooltipped" data-position="top" data-tooltip="Média: 13">11</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R11</span>
+                                <div class="rodada-score score-acima tooltipped" data-position="top" data-tooltip="Média: 8">15</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R12</span>
+                                <div class="rodada-score score-acima tooltipped" data-position="top" data-tooltip="Média: 10">16</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R13</span>
+                                <div class="rodada-score score-abaixo tooltipped" data-position="top" data-tooltip="Média: 11">10</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R14</span>
+                                <div class="rodada-score score-abaixo tooltipped" data-position="top" data-tooltip="Média: 12">9</div>
+                            </div>
+                            <div class="rodada-coluna">
+                                <span class="rodada-label">R15</span>
+                                <div class="rodada-score score-acima tooltipped" data-position="top" data-tooltip="Média: 10">14</div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: right; font-size: 0.65rem; color: #bdbdbd; margin-top: 6px; font-weight: bold;">
+                            <span style="color: #1976d2;">■ Acima da Média</span> | <span style="color: #d32f2f;">■ Abaixo</span>
+                        </div>
+                    </div>
+
+                    <div class="desafios-container">
+                        <div style="font-size: 0.75rem; font-weight: 900; color: #757575; text-transform: uppercase; margin-bottom: 8px;">
+                            Últimos Desafios:
+                        </div>
+
+                        <div class="desafio-placar desafio-vitoria">
+                            <span class="nome-desafiante">Silva</span>
+                            <span class="placar-centro">14 x 12</span>
+                            <span class="nome-desafiante nome-direita">ZagueiroX</span>
+                        </div>
+
+                        <div class="desafio-placar desafio-derrota">
+                            <span class="nome-desafiante">Silva</span>
+                            <span class="placar-centro">9 x 11</span>
+                            <span class="nome-desafiante nome-direita">MestreTatico</span>
+                        </div>
+
+                        <div class="desafio-placar desafio-empate">
+                            <span class="nome-desafiante">Silva</span>
+                            <span class="placar-centro">13 x 13</span>
+                            <span class="nome-desafiante nome-direita">Camisa10</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h6 style="font-weight: 900; color: #424242; margin-top: 30px; margin-bottom: 15px;">
+                <i class="material-icons left">calendar_month</i> Status das Rodadas
+            </h6>
+
+            <div class="card z-depth-1" style="border-radius: 12px; border-left: 5px solid #d32f2f; margin-bottom: 12px;">
+                <div class="card-content" style="padding: 15px 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span class="card-title" style="font-weight: 900; margin: 0; font-size: 1.2rem; color: #424242;">Rodada 15</span>
+                            <p class="red-text" style="font-weight: bold; font-size: 0.85rem; margin-top: 2px;">
+                                <span class="bolinha-live" style="width: 8px; height: 8px; margin-right: 5px; vertical-align: baseline;"></span>Em andamento
+                            </p>
+                        </div>
+                        <a href="#!" class="btn-flat red-text" style="border: 1px solid #d32f2f; border-radius: 6px; font-weight: bold; text-transform: none;">
+                            Ver Parciais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card z-depth-2" style="border-radius: 12px; border-left: 6px solid #f57f17; margin-bottom: 12px;">
+                <div class="card-content" style="padding: 15px 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span class="card-title" style="font-weight: 900; margin: 0; font-size: 1.2rem; color: #424242;">Rodada 16</span>
+                            <p class="grey-text text-darken-2" style="font-size: 0.85rem; margin-top: 2px;">
+                                <i class="material-icons tiny" style="vertical-align: text-top;">schedule</i> Fecha amanhã às 15:45
+                            </p>
+                        </div>
+                        <a href="cartela.html" class="btn orange darken-3 waves-effect waves-light" style="border-radius: 6px; font-weight: bold; text-transform: none;">
+                            Apostar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card z-depth-0" style="background-color: #f5f5f5; border-radius: 12px; border-left: 4px solid #bdbdbd; margin-bottom: 12px;">
+                <div class="card-content" style="padding: 15px 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span class="card-title grey-text" style="font-weight: 900; margin: 0; font-size: 1.2rem;">Rodada 17</span>
+                            <p class="grey-text" style="font-size: 0.85rem; margin-top: 2px;">
+                                <i class="material-icons tiny" style="vertical-align: text-top;">lock_clock</i> Abre em 2 dias
+                            </p>
+                        </div>
+                        <button class="btn disabled" style="border-radius: 6px; font-weight: bold; text-transform: none;">
+                            Aguarde
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h6 style="font-weight: 900; color: #424242; margin-top: 30px; margin-bottom: 15px;">
+                <i class="material-icons left">local_fire_department</i> Top 10: Rodada 15 (Ao Vivo)
+            </h6>
+            <div class="card z-depth-1" style="border-radius: 12px; overflow: hidden;">
+                <ul class="collection" style="margin: 0; border: none;">
+                    <li class="collection-item avatar" style="min-height: 60px;">
+                        <i class="material-icons circle green darken-3">looks_one</i>
+                        <span class="title" style="font-weight: bold;">ZagueiroX</span>
+                        <p class="grey-text" style="font-size: 0.8rem;">11 Acertos</p>
+                        <a href="#!" class="secondary-content" style="font-weight: 900; color: #2e7d32; font-size: 1.2rem;">+14 <span style="font-size: 0.7rem;">XP Parcial</span></a>
+                    </li>
+                    <li class="collection-item avatar" style="min-height: 60px;">
+                        <i class="material-icons circle grey darken-1">looks_two</i>
+                        <span class="title" style="font-weight: bold;">Comandante Silva</span>
+                        <p class="grey-text" style="font-size: 0.8rem;">10 Acertos</p>
+                        <a href="#!" class="secondary-content" style="font-weight: 900; color: #2e7d32; font-size: 1.2rem;">+8 <span style="font-size: 0.7rem;">XP Parcial</span></a>
+                    </li>
+                    <li class="collection-item avatar" style="min-height: 60px;">
+                        <i class="material-icons circle brown darken-1">looks_3</i>
+                        <span class="title" style="font-weight: bold;">Camisa10</span>
+                        <p class="grey-text" style="font-size: 0.8rem;">9 Acertos</p>
+                        <a href="#!" class="secondary-content" style="font-weight: 900; color: #d32f2f; font-size: 1.2rem;">-3 <span style="font-size: 0.7rem;">XP Parcial</span></a>
+                    </li>
+                </ul>
+                <div class="card-action center-align" style="background-color: #f5f5f5; padding: 10px;">
+                    <a href="#" class="green-text text-darken-3" style="font-weight: bold; text-transform: none;">Ver Tabela Completa</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col s12 l4">
+
+            <div class="card z-depth-1" style="border-radius: 12px; border-top: 5px solid #d32f2f;">
+                <div class="card-content" style="padding: 15px; border-bottom: 1px solid #eee;">
+                    <h6 style="font-weight: 900; color: #d32f2f; margin: 0;">
+                        <span class="bolinha-live" style="margin-right: 8px;"></span>Jogos da Rodada 15
+                    </h6>
+                </div>
+
+                <div class="card-content" style="padding: 10px 15px;">
+                    <div class="live-matches-panel">
+                        <div class="placar-mini">
+                            <span class="status-jogo status-live">AO VIVO</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">FLA</span>
+                                <img src="https://media.api-sports.io/football/teams/127.png" class="mini-escudo">
+                                <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">2 x 1</span>
+                                <img src="https://media.api-sports.io/football/teams/126.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">SAO</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-live">AO VIVO</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">PAL</span>
+                                <img src="https://media.api-sports.io/football/teams/121.png" class="mini-escudo">
+                                <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">0 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/120.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">VAS</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-live">AO VIVO</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">INT</span>
+                                <img src="https://media.api-sports.io/football/teams/119.png" class="mini-escudo">
+                                <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">1 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/130.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">GRE</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-live">AO VIVO</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">BOT</span>
+                                <img src="https://media.api-sports.io/football/teams/120.png" class="mini-escudo">
+                                <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">2 x 2</span>
+                                <img src="https://media.api-sports.io/football/teams/124.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">FLU</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">COR</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">1 x 1</span>
+                                <img src="https://media.api-sports.io/football/teams/128.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">SAN</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CAM</span>
+                                <img src="https://media.api-sports.io/football/teams/126.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">3 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/135.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CRU</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">BAH</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">2 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">VIT</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CAP</span>
+                                <img src="https://media.api-sports.io/football/teams/134.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">0 x 1</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CFC</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">SPO</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">0 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">NAU</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-fim">FIM</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center; opacity: 0.6;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">FOR</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="background: #e0e0e0; color: #424242; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin: 0 5px;">1 x 0</span>
+                                <img src="https://media.api-sports.io/football/teams/134.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CEA</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">16:00</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">GOI</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">ACG</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">16:00</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">JUV</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/128.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CHA</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">16:00</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">AVA</span>
+                                <img src="https://media.api-sports.io/football/teams/126.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/135.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">FIG</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">18:30</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">PAY</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">REM</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">18:30</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">VIL</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/128.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">PAR</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">18:30</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">PON</span>
+                                <img src="https://media.api-sports.io/football/teams/126.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/135.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">GUA</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">20:00</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CRI</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">BRU</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">20:00</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CRB</span>
+                                <img src="https://media.api-sports.io/football/teams/131.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/128.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">CSA</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">21:30</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">SAM</span>
+                                <img src="https://media.api-sports.io/football/teams/126.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/135.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">MOT</span>
+                            </div>
+                        </div>
+
+                        <div class="placar-mini">
+                            <span class="status-jogo status-wait">21:30</span>
+                            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <span style="font-weight: 900; font-size: 0.85rem;">ABC</span>
+                                <img src="https://media.api-sports.io/football/teams/118.png" class="mini-escudo">
+                                <span style="color: #9e9e9e; padding: 2px 8px; font-weight: bold; margin: 0 5px;">- x -</span>
+                                <img src="https://media.api-sports.io/football/teams/133.png" class="mini-escudo">
+                                <span style="font-weight: 900; font-size: 0.85rem;">AME</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="rankings" style="margin-top: 30px;">
+        <div class="col s12">
+            <h6 style="font-weight: 900; color: #424242; margin-bottom: 20px;"><i class="material-icons left">emoji_events</i> Top 5 por Liga</h6>
+
+            <div class="ligas-container">
+
+                <div class="liga-card" style="border-top-color: #ffd54f;">
+                    <span style="font-size: 0.8rem; font-weight: 900; color: #f57f17; text-transform: uppercase;">Lenda</span>
+                    <ul class="ranking-lista">
+                        <li><span>1.</span> <span class="nome">MestreTatico</span> <span class="xp">1.250 XP</span></li>
+                        <li><span>2.</span> <span class="nome">Bruxo10</span> <span class="xp">1.180 XP</span></li>
+                        <li><span>3.</span> <span class="nome">ReiDaTatica</span> <span class="xp">1.150 XP</span></li>
+                        <li><span>4.</span> <span class="nome">GoleadorX</span> <span class="xp">1.090 XP</span></li>
+                        <li><span>5.</span> <span class="nome">Maestro</span> <span class="xp">1.020 XP</span></li>
+                    </ul>
+                </div>
+
+                <div class="liga-card" style="border-top-color: #81d4fa;">
+                    <span style="font-size: 0.8rem; font-weight: 900; color: #0288d1; text-transform: uppercase;">Diamante</span>
+                    <ul class="ranking-lista">
+                        <li><span>1.</span> <span class="nome">ZagueiroX</span> <span class="xp">980 XP</span></li>
+                        <li><span>2.</span> <span class="nome">Camisa9</span> <span class="xp">965 XP</span></li>
+                        <li><span>3.</span> <span class="nome">Falso9</span> <span class="xp">940 XP</span></li>
+                        <li><span>4.</span> <span class="nome">LateralPro</span> <span class="xp">910 XP</span></li>
+                        <li><span>5.</span> <span class="nome">Paredao</span> <span class="xp">890 XP</span></li>
+                    </ul>
+                </div>
+
+                <div class="liga-card" style="border-top-color: #ffca28;">
+                    <span style="font-size: 0.8rem; font-weight: 900; color: #ff8f00; text-transform: uppercase;">Ouro</span>
+                    <ul class="ranking-lista">
+                        <li><span>1.</span> <span class="nome">Camisa10</span> <span class="xp">710 XP</span></li>
+                        <li><span>2.</span> <span class="nome">VolanteG</span> <span class="xp">695 XP</span></li>
+                        <li><span>3.</span> <span class="nome">Silva11</span> <span class="xp">680 XP</span></li>
+                        <li><span>4.</span> <span class="nome">TocoYMeVoy</span> <span class="xp">650 XP</span></li>
+                        <li><span>5.</span> <span class="nome">Comandante S.</span> <span class="xp">520 XP</span></li>
+                    </ul>
+                </div>
+
+                <div class="liga-card" style="border-top-color: #e0e0e0;">
+                    <span style="font-size: 0.8rem; font-weight: 900; color: #757575; text-transform: uppercase;">Prata</span>
+                    <ul class="ranking-lista">
+                        <li><span>1.</span> <span class="nome">GoleiroFrio</span> <span class="xp">450 XP</span></li>
+                        <li><span>2.</span> <span class="nome">AtacanteR</span> <span class="xp">420 XP</span></li>
+                        <li><span>3.</span> <span class="nome">Junior12</span> <span class="xp">390 XP</span></li>
+                        <li><span>4.</span> <span class="nome">ZagaForte</span> <span class="xp">350 XP</span></li>
+                        <li><span>5.</span> <span class="nome">Reserva01</span> <span class="xp">310 XP</span></li>
+                    </ul>
+                </div>
+
+                <div class="liga-card" style="border-top-color: #bcaaa4;">
+                    <span style="font-size: 0.8rem; font-weight: 900; color: #5d4037; text-transform: uppercase;">Bronze</span>
+                    <ul class="ranking-lista">
+                        <li><span>1.</span> <span class="nome">Iniciante01</span> <span class="xp">210 XP</span></li>
+                        <li><span>2.</span> <span class="nome">PlayerNovo</span> <span class="xp">180 XP</span></li>
+                        <li><span>3.</span> <span class="nome">Teste02</span> <span class="xp">150 XP</span></li>
+                        <li><span>4.</span> <span class="nome">Visitante</span> <span class="xp">120 XP</span></li>
+                        <li><span>5.</span> <span class="nome">ZeNinguem</span> <span class="xp">90 XP</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<div class="mobile-bottom-nav z-depth-3 hide-on-large-only">
+    <a href="dashboard.html" class="ativo">
+        <i class="material-icons">dashboard</i>
+        <span>Início</span>
+    </a>
+    <a href="cartela.html">
+        <i class="material-icons">sports_soccer</i>
+        <span>Cartela</span>
+    </a>
+    <a href="#rankings">
+        <i class="material-icons">emoji_events</i>
+        <span>Ranking</span>
+    </a>
+    <a href="#">
+        <i class="material-icons">person</i>
+        <span>Perfil</span>
+    </a>
+</div>
+
+<script src="js/jquery-4.0.0.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
